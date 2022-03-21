@@ -1,7 +1,6 @@
 import React from 'react'
 import { Button, Menu, Typography, Avatar} from 'antd';
 import {Link} from 'react-router-dom'
-// import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOutlined, MenuOutlined } from '@ant-design/icons';
 import icon from '../images/2.png'
 import { BulbOutlined, FundOutlined, HomeOutlined, MoneyCollectOutlined } from '@ant-design/icons';
 
@@ -10,7 +9,7 @@ const Navbar = () => {
     <div className ='nav-container'>
       <div className="logo-container">
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo"><Link to="/">Cryptoverse</Link></Typography.Title>
+        <Typography.Title level={2} className="logo"><Link to="/">cryptoCipher</Link></Typography.Title>
 
       </div>
        <Menu theme='dark'>
