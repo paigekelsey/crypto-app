@@ -3,12 +3,13 @@
     --text-primary:#000;
     --bgPrimary:#fff;
    --bgSecondary: #F9F9F9;
-   --pink: #0071bd;
+   --pink: #cf6331;
    --light-blue: #e6f7ff;
    --border: #d9d9d9;
 }
 
 * {
+    font-family: 'Montserrat';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,7 +26,7 @@ a:hover{
 
 .navbar{
     flex: 0.2;
-    background-color: rgb(0, 21, 41);
+    background-color: white;
 }
 
 .main{
@@ -42,11 +43,14 @@ a:hover{
     margin: 10px;
     height: 100vh;
     margin: 0px;
-    background-color: rgb(0, 21, 41);
+    background-color: white;
 }
 
+#linky .logo{
+    color:#000
+}
 .logo-container{
-    background-color: #001529;
+
     display: flex;
     padding: 20px;
     align-items: center;
@@ -54,9 +58,10 @@ a:hover{
 }
 .logo{
     margin:0 0 0 15px;
+    color:#303072
 }
 .logo a{
-   color: white;
+   color: #303072;
 }
 .menu-control-container{
     display: none !important;
@@ -371,7 +376,7 @@ width: 70%;
 }
 
 .footer {
-    background-color: #001529;
+    background-color: #303072;
     display: flex;
     flex-direction: column;
     padding: 20px;

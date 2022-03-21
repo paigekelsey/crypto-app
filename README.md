@@ -1,10 +1,21 @@
 # cryptoCipher
+# cryptoCipher 
+cryptoCipher is a fully functioning React application that has everything you need to know about cryptocurrencies, from exchange rates to news and a lot more.
+**Deployed Version here:** 
+
+## Video Demostration:
 
 
-style - ant design
-redux
-axios api requests
-chart.js - create charts
-html react parser - parse html data
-millify- transform large numbers to readable strings
-moment- parse times and dates
+## Tech Stacks used
+* Frontend with **React**
+* State Management using **Redux Toolkit**
+* UI Creation using **Ant Design**
+* creating charts using **Chart.js**
+* fetching data from multiple sources using **RapidAPI**
+
+### Steps to run it locally:
+1. Clone the repository using `git clone [repository url]`.
+2. Enter to the project directory `cd [local repository]`.
+3. Install the dependencies using `npm install`.
+4. Run the project `npm start`, the project should be running on http://localhost:3000 . **Enjoy!!**
+
