@@ -50,3 +50,25 @@ a {
   #dict-text:hover .text-dict {
     visibility:visible;
     }
+
+
+    .card-wrapper{
+      margin-left: auto;
+    margin-right: auto;
+    width: 35%
+    }
+        .card-container1{
+          margin-top: 2rem;
+          width: 20em;
+        float:left
+        }
+        .card-container2{
+          margin-top: 2rem;
+        width: 20em;
+        float:right
+        }
+            .card-container3{
+          margin-top: 2rem;
+        width: 20em;
+        float:left
+        }
