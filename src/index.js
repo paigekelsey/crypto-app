@@ -1,17 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-import { Provider } from "react-redux";
-import store from "./app/store";
+import "./index.css";
 import App from "./App";
-
-import "antd/dist/antd.css";
+import "react-alice-carousel/lib/alice-carousel.css";
+import CryptoContext from "./CryptoContext";
 
 ReactDOM.render(
-	<Router>
-		<Provider store={store}>
-			<App />
-		</Provider>
-	</Router>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <CryptoContext>
+      <App />
+    </CryptoContext>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

@@ -1,55 +1,30 @@
-import React from "react";
-import { Routes, Link, Route } from "react-router-dom";
-import { Layout, Space, Typography } from "antd";
-
-import {
-	Navbar,
-	HomePage,
-	CryptoCurrencies,
-	CryptoDetails,
-	Exchanges,
-	News,
-} from "./components";
+import { makeStyles } from "@material-ui/core";
+import Homepage from "./Pages/HomePage";
 import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import CoinPage from "./Pages/CoinPage";
+import Header from "./components/Header";
 
-const App = () => {
-	return (
-		<div className="app">
-			<div className="navbar">
-				<Navbar />
-			</div>
-			<div className="main">
-				<Layout>
-					<div className="app-routes">
-						<Routes>
-							<Route path="/" element={<HomePage />} />							
-							<Route
-								path="/cryptocurrencies"
-								element={<CryptoCurrencies />}
-							/>
-							<Route path="/news" element={<News />} />
-							<Route
-								path="/cryptocurrencies/:coinId"
-								element={<CryptoDetails />}
-							/>
-						</Routes>
-					</div>
-				</Layout>
-				<div className="footer">
-					<Typography.Title
-						level={5}
-						style={{ color: "white", textAlign: "center" }}> 
-						<Link to="/"> cryptoCipher</Link> <br />
-						Created by <Link to="https://github.com/paigekelsey"> Kelsey Smith</Link>
-					</Typography.Title>
-					<Space>
-						<Link to="/">Home</Link>
-						<Link to="/news">News</Link>
-					</Space>
-				</div>
-			</div>
-		</div>
-	);
-};
+const useStyles = makeStyles(() => ({
+  App: {
+    backgroundColor: "white",
+    color: "5C6BC0",
+    minHeight: "100vh",
+  },
+}));
+
+function App() {
+  const classes = useStyles();
+
+  return (
+    <BrowserRouter>
+      <div className={classes.App}>
+        <Header />
+        <Route path="/" component={Homepage} exact />
+        <Route path="/coins/:id" component={CoinPage} exact />
+      </div>
+    </BrowserRouter>
+  );
+}
 
 export default App;
