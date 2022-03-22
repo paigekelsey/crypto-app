@@ -12,7 +12,6 @@ I have been wanting to educate myself on cryptocurrencies and I decided to learn
 ## Tech Stacks used
 * Frontend with **React**
 * State Management using **Redux Toolkit**
-* UI Creation using **Ant Design**
 * creating charts using **Chart.js**
 * fetching data from multiple sources using **RapidAPI**
 

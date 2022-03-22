@@ -36,7 +36,7 @@ function Banner() {
       <Container className={classes.bannerContent}>
         <div className={classes.tagline}>
           <Typography
-            variant="h2"
+            variant="h4"
             style={{
               fontWeight: "bold",
               marginBottom: 15,
@@ -45,16 +45,6 @@ function Banner() {
             }}
           >
         
-            A cipher for your crypto. 
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            style={{
-              color: "white",
-              textTransform: "capitalize",
-              fontFamily: "Montserrat",
-            }}
-          >
             A cipher for your crypto. 
           </Typography>
         </div>

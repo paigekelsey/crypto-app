@@ -12,6 +12,7 @@ import {
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
 
+
 const useStyles = makeStyles(() => ({
   title: {
     flex: 1,
@@ -33,8 +34,16 @@ function Header() {
   return (
 
       <AppBar color="transparent" position="static">
-        <Container>
+        <Container style={{padding:"2rem"}}>
           <Toolbar>
+           
+            <Typography
+              onClick={() => history.push(`/about`)}
+              variant="h6"
+              className={classes.title}
+            >
+              About
+            </Typography>
             <img
              src='./2.png'
              width='100px' height='100px'
@@ -46,7 +55,9 @@ function Header() {
             >
               cryptoCipher
             </Typography>
+           
             {/* <Button color="inherit">Login</Button>*/}
+
             <Select
               variant="outlined"
               labelId="demo-simple-select-label"

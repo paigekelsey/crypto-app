@@ -9,7 +9,12 @@
 
 a {
   text-decoration: none;
-  color: gold;
+  color: #5C6BC0;
+  font-weight: bolder
 }
 
+.about-container{
+  text-align: center;
+  margin-top: 5rem
+}
 
