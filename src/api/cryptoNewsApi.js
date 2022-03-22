@@ -6,6 +6,7 @@ const cryptoNewsHeaders = {
 	"x-rapidapi-key": "b614a68707msha2b052a4a41205dp182147jsn486bd19dcb12",
 };
 
+
 const baseUrl = "https://bing-news-search1.p.rapidapi.com";
 const createRequest = (url) => ({ url: url, headers: cryptoNewsHeaders });
 
