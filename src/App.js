@@ -5,6 +5,7 @@ import "./App.css";
 import { BrowserRouter, Route } from "react-router-dom";
 import CoinPage from "./Pages/CoinPage";
 import Header from "./components/Header";
+import Glossary from "./Pages/Glossary"
 
 const useStyles = makeStyles(() => ({
   App: {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/" component={Homepage} exact />
         <Route path="/coins/:id" component={CoinPage} exact />
         <Route path="/about" component={PageM} exact />
+        <Route path="/glossary" component= {Glossary} exact/>
       </div>
     </BrowserRouter>
   );
