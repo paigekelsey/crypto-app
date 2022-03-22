@@ -36,13 +36,23 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container style={{padding:"2rem"}}>
           <Toolbar>
-           
             <Typography
               onClick={() => history.push(`/about`)}
               variant="h6"
               className={classes.title}
+              style={{ fontSize: 18 }}
+
             >
               About
+            </Typography>
+            <Typography
+              onClick={() => history.push(`/glossary`)}
+              variant="h6"
+              className={classes.title}
+              style={{ fontSize: 18 }}
+
+            >
+              Glossary
             </Typography>
             <img
              src='./2.png'
