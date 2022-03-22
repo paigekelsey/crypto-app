@@ -35,7 +35,10 @@ function Header() {
       <AppBar color="transparent" position="static">
         <Container>
           <Toolbar>
-            <img src='./2.png'/>
+            <img
+             src='./2.png'
+             width='100px' height='100px'
+             alt="crypto"/>
             <Typography
               onClick={() => history.push(`/`)}
               variant="h6"
@@ -54,6 +57,8 @@ function Header() {
             >
               <MenuItem value={"USD"}>USD</MenuItem>
               <MenuItem value={"INR"}>INR</MenuItem>
+              <MenuItem value={"EUR"}>EUR</MenuItem>
+              <MenuItem value={"JPY"}>JPY</MenuItem>
             </Select>
           </Toolbar> 
         </Container>
