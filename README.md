@@ -1,6 +1,6 @@
 # cryptoCipher 
 cryptoCipher is a fully functioning React application that has everything you need to know about cryptocurrencies, from exchange rates to news and a lot more.
-# **Deployed Version here:** https://crypto-cipher.netlify.app/
+### **Deployed Version here:** https://crypto-cipher.netlify.app/
 
 
 ## Idea:
