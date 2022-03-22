@@ -30,3 +30,23 @@ a {
   text-align: left;
   margin-top:5%
 }
+
+#dict-text .text-dict{
+  position:relative;
+  left:0px;
+  visibility:hidden;
+}
+
+#about-text .text-about{
+  position:relative;
+  left:0px;
+  visibility:hidden;
+}
+  
+  #about-text:hover .text-about {
+  visibility:visible;
+  }
+
+  #dict-text:hover .text-dict {
+    visibility:visible;
+    }
