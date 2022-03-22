@@ -1,6 +1,6 @@
 import React from "react";
-import {GitHubIcon} from '@mui/icons-material';
-import { Paper } from '@mui/material';
+// import {GitHubIcon} from '@mui/icons-material';
+// import { Paper } from '@mui/material';
 import { Card, CardContent } from '@material-ui/core';
 
 
@@ -18,7 +18,7 @@ const PageM = () => {
        
       <h5>Created by:</h5>
        <h4>Kelsey Smith</h4>
-      <GitHubIcon/>
+   
    
     </div>
     </CardContent>
@@ -31,7 +31,7 @@ const PageM = () => {
        
       <h5>Created by:</h5>
        <h4>Kelsey Smith</h4>
-      <GitHubIcon/>
+  
    
     </div>
     </CardContent>
@@ -44,7 +44,7 @@ const PageM = () => {
        
       <h5>Created by:</h5>
        <h4>Kelsey Smith</h4>
-      <GitHubIcon/>
+   
    
     </div>
     </CardContent>

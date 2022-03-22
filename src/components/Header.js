@@ -5,17 +5,15 @@ import {
   Select,
   Toolbar,
   Typography,
-  IconButton,
-  Tooltip
 } from "@material-ui/core";
 import {
   makeStyles,
 } from "@material-ui/core/styles";
-import InfoIcon from '@mui/icons-material/Info';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
+// import InfoIcon from '@mui/icons-material/Info';
+// import MenuBookIcon from '@mui/icons-material/MenuBook';
 import { useHistory } from "react-router-dom";
 import { CryptoState } from "../CryptoContext";
-import Box from '@mui/material/Box';
+
 
 
 const useStyles = makeStyles(() => ({
@@ -70,7 +68,7 @@ function Header() {
              alt="crypto"/>
               cryptoCipher
             </Typography>
-            <div className={classes.menuIcon}>
+            {/* <div className={classes.menuIcon}>
               <div id="dict-text">
               <p className="text-dict">Glossary</p>
             <MenuBookIcon
@@ -91,7 +89,7 @@ function Header() {
               id="hover"
             />
             </div>
-             </div>
+             </div> */}
             
             <Select
               variant="outlined"
