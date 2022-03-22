@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import { useGetCrytoExchangesQuery } from "../api/cryptoApi";
 
 const Exchanges = () => {
-  return (
-    <div>Exchanges</div>
-  )
-}
+	const { data, isFetching } = useGetCrytoExchangesQuery();
+	console.log(data);
 
-export default Exchanges
+	if (isFetching) return "Loading...";
+	return (
+		<div>
+			To get the exchanges data need to have a premium plan from Rapid
+			API's Coinranking API premium plan
+		</div>
+	);
+};
+
+export default Exchanges;

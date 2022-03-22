@@ -1,55 +1,76 @@
 import React from "react";
 import millify from "millify";
-import { Typography, Row, Col, Statistic } from "antd";
 import { Link } from "react-router-dom";
-import Cryptocurrencies from "./Cryptocurrencies";
-import News from "./News";
+import { Col, Row, Statistic, Typography } from "antd";
+import { useGetCryptosQuery } from "../api/cryptoApi";
+import { CryptoCurrencies, News } from "../components";
 
 const { Title } = Typography;
 
-const Homepage = () => {
-  return (
-    <div>
-      <Title level={2} className="heading">
-        Crypto Data
-      </Title>
-      <Row gutter={[32, 32]}>
-        <Col span={12}>
-          <Statistic title="Total Cryptocurrencies" value={1} />
-        </Col>
-        <Col span={12}>
-          <Statistic title="Total Exchanges" value={1} />
-        </Col>
-        <Col span={12}>
-          <Statistic title="Total Market Cap" value={1} />
-        </Col>
-        <Col span={12}>
-          <Statistic title="Total 24h Volume" value={1} />
-        </Col>
-        <Col span={12}>
-          <Statistic title="Total Market" value={1} />
-        </Col>
-      </Row>
-      <div className="home-heading-container">
-        <Title level={2} className="home-title">
-          Top 10 Global Cryptos
-        </Title>
-        <Title level={3} className="show-more">
-          <Link to="/cryptocurrencies">Show more</Link>
-        </Title>
-      </div>
-      <Cryptocurrencies simplified />
-      <div className="home-heading-container">
-        <Title level={2} className="home-title">
-          Latest Crypto News
-        </Title>
-        <Title level={3}>
-          <Link to="/news">Show more</Link>
-        </Title>
-      </div>
-      <News simplified />
-    </div>
-  );
+const HomePage = () => {
+	const { data, isFetching } = useGetCryptosQuery(10);
+	const globalCryptoStats = data?.data?.stats;
+	if (isFetching) return "Loading...";
+
+	return (
+		<>
+			<Title level={2} className="heading">
+				 Crypto World Stats
+			</Title>
+			<Row>
+				<Col span={12}>
+					<Statistic
+						title="Total Cryptocurrencies"
+						value={globalCryptoStats.total}
+					/>
+				</Col>
+				<Col span={12}>
+					<Statistic
+						title="Total Exchanges"
+						value={millify(globalCryptoStats.totalExchanges)}
+					/>
+				</Col>
+
+				<Col span={12}>
+					<Statistic
+						title="Total Market Cap"
+						value={millify(globalCryptoStats.totalMarketCap)}
+					/>
+				</Col>
+				<Col span={12}>
+					<Statistic
+						title="Total 24h Volume"
+						value={millify(globalCryptoStats.total24hVolume)}
+					/>
+				</Col>
+				<Col span={12}>
+					<Statistic
+						title="Total Markets"
+						value={millify(globalCryptoStats.totalMarkets)}
+					/>
+				</Col>
+			</Row>
+			<div className="home-heading-container">
+				<Title level={2} className="home-title">
+					Top 10 Crypto Currencies in the World
+				</Title>
+				<Title level={3} className="show-more">
+					<Link to="/cryptocurrencies">Show More</Link>
+				</Title>
+			</div>
+			<CryptoCurrencies simplified={true} />
+
+			<div className="home-heading-container">
+				<Title level={2} className="home-title">
+					Latest Crypto News Around the World
+				</Title>
+				<Title level={3} className="show-more">
+					<Link to="/news">Show More</Link>
+				</Title>
+			</div>
+			<News simplified={true} />
+		</>
+	);
 };
 
-export default Homepage;
+export default HomePage;
